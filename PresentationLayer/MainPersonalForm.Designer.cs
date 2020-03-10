@@ -690,6 +690,7 @@
             this.tabCreateMailingList.TabIndex = 4;
             this.tabCreateMailingList.Text = "Skapa utskickslistor";
             this.tabCreateMailingList.UseVisualStyleBackColor = true;
+            this.tabCreateMailingList.Click += new System.EventHandler(this.tabCreateMailingList_Click);
             // 
             // label32
             // 

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="BusinessEntites.Models.Aktivitet">
-    <Position X="1.5" Y="5.5" Width="1.5" />
+    <Position X="3.5" Y="7.75" Width="1.5" />
     <TypeIdentifier />
     <ShowAsCollectionAssociation>
       <Property Name="InformationsutskickAktivitet" />
@@ -10,7 +10,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessEntites.Models.Alumn">
-    <Position X="7.25" Y="0.75" Width="1.5" />
+    <Position X="9.25" Y="3" Width="1.5" />
     <AssociationLine Name="InformationsutskickAlumn" Type="BusinessEntites.Models.Junction.InformationsutskickAlumn">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="-1.327" Y="0.195" />
@@ -22,11 +22,12 @@
       <Property Name="AlumnKompetens" />
       <Property Name="InformationsutskickAlumn" />
       <Property Name="AlumnAktivitet" />
+      <Property Name="AlumnMaillistor" />
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessEntites.Models.Informationsutskick">
-    <Position X="9.75" Y="5.5" Width="1.5" />
+    <Position X="11.75" Y="7.75" Width="1.5" />
     <TypeIdentifier />
     <ShowAsCollectionAssociation>
       <Property Name="InformationsutskickAlumn" />
@@ -36,17 +37,17 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessEntites.Models.Junction.InformationsutskickAktivitet">
-    <Position X="4" Y="6.75" Width="1.5" />
+    <Position X="7.25" Y="9" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessEntites.Models.Junction.InformationsutskickAlumn">
-    <Position X="6.25" Y="4" Width="1.5" />
+    <Position X="8.25" Y="6.25" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessEntites.Models.Personal">
-    <Position X="5.5" Y="9.5" Width="1.5" />
+    <Position X="7" Y="11.75" Width="1.5" />
     <TypeIdentifier />
     <ShowAsCollectionAssociation>
       <Property Name="PersonalInformationsutskick" />
@@ -54,37 +55,50 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessEntites.Models.Junction.AlumnProgram">
-    <Position X="9.5" Y="0.5" Width="1.5" />
+    <Position X="11.5" Y="2.75" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessEntites.Models.Junction.AlumnKompetens">
-    <Position X="9.5" Y="3" Width="1.75" />
+    <Position X="11.5" Y="5.25" Width="1.75" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessEntites.Models.Junction.PersonalInformationsutskick">
-    <Position X="8" Y="8.25" Width="1.5" />
+    <Position X="11.5" Y="11.25" Width="1.5" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessEntites.Models.Junction.AlumnAktivitetBokning">
-    <Position X="2.75" Y="0.75" Width="2" />
+    <Position X="4.75" Y="3" Width="2" />
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessEntites.Models.Kompetens">
-    <Position X="13" Y="3.5" Width="1.5" />
+    <Position X="15" Y="5.75" Width="1.5" />
     <TypeIdentifier />
     <ShowAsCollectionAssociation>
       <Property Name="AlumnKompetens" />
     </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="BusinessEntites.Models.Program">
-    <Position X="13" Y="0.5" Width="1.5" />
+    <Position X="15" Y="2.75" Width="1.5" />
     <TypeIdentifier />
     <ShowAsCollectionAssociation>
       <Property Name="AlumnProgram" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BusinessEntites.Models.Junction.AlumnMaillista">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="BusinessEntites.Models.Maillista">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsCollectionAssociation>
+      <Property Name="AlumnMaillistor" />
     </ShowAsCollectionAssociation>
   </Class>
   <Font Name="Arial" Size="10" />
