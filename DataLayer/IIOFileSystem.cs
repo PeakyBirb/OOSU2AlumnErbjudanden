@@ -10,6 +10,5 @@ namespace DataLayer
     public interface IIOFileSystem
     {
         void SkrivaAlumnAktivitetTillCSVFil(string Aktivitettitel, List<Alumn> alumner);
-
     }
 }

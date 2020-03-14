@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PresentationLayer
 {
-    public static class GLOBALS
+    public static class GLOBALS : IGLOBALS
     {
         public static Alumn AktuellAlumn { get; set; }
         public static Personal AktuellPersonal { get; set; }

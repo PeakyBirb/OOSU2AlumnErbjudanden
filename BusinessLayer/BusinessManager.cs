@@ -13,7 +13,7 @@ using ProgramClass = BusinessEntites.Models.Program;
 
 namespace BusinessLayer
 {
-    public class BusinessManager
+    public class BusinessManager : IBusinessManager
     {
         public UnitOfWork unitOfWork = new UnitOfWork(new DatabaseContext());
         public IOFileSystem iof = new IOFileSystem();

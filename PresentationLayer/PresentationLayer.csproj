@@ -203,6 +203,7 @@
       <DependentUpon>MainAlumnForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Observer\IObserver.cs" />
+    <Compile Include="Observer\ISubject.cs" />
     <Compile Include="Observer\Subject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PresentationLayer.Observer
 {
-    public class Subject
+    public class Subject : ISubject
     {
         public void register(IObserver observer)
         {
