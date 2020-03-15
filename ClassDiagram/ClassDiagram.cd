@@ -78,6 +78,13 @@
   </Class>
   <Class Name="BusinessEntites.Models.Junction.InformationsutskickAlumn">
     <Position X="7.75" Y="9" Width="2.5" />
+    <AssociationLine Name="Alumn" Type="BusinessEntites.Models.Alumn" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.25" Y="9.938" />
+        <Point X="11.688" Y="9.938" />
+        <Point X="11.688" Y="7.506" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier />
     <ShowAsAssociation>
       <Property Name="Alumn" />
