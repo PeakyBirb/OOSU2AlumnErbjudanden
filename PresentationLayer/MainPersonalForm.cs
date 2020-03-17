@@ -599,12 +599,15 @@ namespace PresentationLayer
                         AlumnerAttVisa.Add(alumn);
 
                     }
-                }
-
+               }
+                if (AlumnerAttVisa.Count != 0)
+                {
                     //MailingListaALumnerlistBox.DataSource = Alumner3;
                     MailingListaALumnerlistBox.DataSource = AlumnerAttVisa;
                     MailingListaALumnerlistBox.DisplayMember = "Förnamn";
                     MailingListaALumnerlistBox.ValueMember = "AnvändarID";
+                }
+
                 
 
             }
