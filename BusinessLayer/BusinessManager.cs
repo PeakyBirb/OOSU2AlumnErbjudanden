@@ -302,5 +302,31 @@ namespace BusinessLayer
 
             return AlumnerAttSkicka;
         }
+
+        public bool CheckMaillistName(string maillistaNamn)
+        {
+            //Hämta namnet på alla maillistor
+            //kolla om namnet passar på någon
+            //Returnera true om namnet inte finns med.
+
+            IEnumerable<Maillista> maillistor = unitOfWork.MaillistaRepository.GetAll();
+            List<string> upptagnaNamn = new List<string>();
+            bool NamnUpptaget = false;
+
+            foreach (var maillista in maillistor)
+            {
+                upptagnaNamn.Add(maillista.MaillistaNamn);
+            }
+
+            foreach (string namn in upptagnaNamn)
+            {
+                if (namn.Equals(maillistaNamn))
+                {
+                    NamnUpptaget = true;
+                }
+            }
+
+            return NamnUpptaget;
+        }
     }
 }

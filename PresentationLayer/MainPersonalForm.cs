@@ -508,8 +508,14 @@ namespace PresentationLayer
             {
                 MessageBox.Show("Du måste lägga till minst en alumn i listan valda alumner.");
             }
+            else if (bm.CheckMaillistName(NamnMailListaTextBox.Text))
+            {
+                MessageBox.Show("Namnet maillistan är upptaget.");
+            }
             else
             {
+                //kolla så namnet inte är upptaget.
+                ;
 
                 Maillista maillista = new Maillista()
                 {
@@ -580,9 +586,27 @@ namespace PresentationLayer
             if (GamlaListorComboBox.SelectedItem != null)
             {
                 List<Alumn> Alumner3 = bm.HämtaAlumnerFrånMailLista(((Maillista)GamlaListorComboBox.SelectedItem).MaillistaID);
-                MailingListaALumnerlistBox.DataSource = Alumner3;
-                MailingListaALumnerlistBox.DisplayMember = "Förnamn";
-                MailingListaALumnerlistBox.ValueMember = "AnvändarID";
+                List<Alumn> AlumnerAttVisa = new List<Alumn>();
+
+                foreach (Alumn alumn in Alumner3)
+                {
+                    if (!MailingListaALumnerlistBox.Items.Contains(alumn))
+                    {
+                        foreach (Alumn alumn2 in MailingListaALumnerlistBox.Items)
+                        {
+                            AlumnerAttVisa.Add(alumn2);
+                        }
+                        AlumnerAttVisa.Add(alumn);
+
+                    }
+                }
+
+                    //MailingListaALumnerlistBox.DataSource = Alumner3;
+                    MailingListaALumnerlistBox.DataSource = AlumnerAttVisa;
+                    MailingListaALumnerlistBox.DisplayMember = "Förnamn";
+                    MailingListaALumnerlistBox.ValueMember = "AnvändarID";
+                
+
             }
         }
 
