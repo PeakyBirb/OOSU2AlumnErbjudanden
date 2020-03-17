@@ -114,9 +114,9 @@ namespace PresentationLayer
 
             //Fyll på utskickslistor på gamla utskickslistor
 
-            MailingListaALumnerlistBox.DataSource = bm.HämtaAllaInformationsutskick();
-            MailingListaALumnerlistBox.DisplayMember = "UtskicksNamn";
-            MailingListaALumnerlistBox.ValueMember = "UtskicksID";
+            //MailingListaALumnerlistBox.DataSource = bm.HämtaAllaInformationsutskick();
+            //MailingListaALumnerlistBox.DisplayMember = "UtskicksNamn";
+            //MailingListaALumnerlistBox.ValueMember = "UtskicksID";
 
             //Fyll på maillistor
             GamlaListorComboBox.DataSource = bm.HämtaAllaMaillistor();
@@ -315,9 +315,9 @@ namespace PresentationLayer
             //Tömmer sätt namn på Utskicksboxen och ValdaAlumner samt fyller i gamla listorboxen. 
             NamnMailListaTextBox.Clear();
 
-            GamlaListorComboBox.DataSource = bm.HämtaAllaInformationsutskick();
-            GamlaListorComboBox.DisplayMember = "UtskicksNamn";
-            GamlaListorComboBox.ValueMember = "UtskicksID";
+            //GamlaListorComboBox.DataSource = bm.HämtaAllaInformationsutskick();
+            //GamlaListorComboBox.DisplayMember = "UtskicksNamn";
+            //GamlaListorComboBox.ValueMember = "UtskicksID";
 
             valdaAlumnerListBox.BeginUpdate();
             valdaAlumnerListBox.DataSource = new ArrayList();
@@ -402,17 +402,17 @@ namespace PresentationLayer
             valdaAlumnerListBox.EndUpdate();
         }
 
-        private void VäljGammalUtskicksListacomboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (GamlaListorComboBox.SelectedItem != null)
-            {
-                List<Alumn> Alumner = bm.HämtaAlumnerFrånLista(((Informationsutskick)GamlaListorComboBox.SelectedItem).UtskicksID);
-                MailingListaALumnerlistBox.DataSource = Alumner;
-                MailingListaALumnerlistBox.DisplayMember = "Förnamn";
-                MailingListaALumnerlistBox.ValueMember = "AnvändarID";
-            }
+        //private void VäljGammalUtskicksListacomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (GamlaListorComboBox.SelectedItem != null)
+        //    {
+        //        List<Alumn> Alumner = bm.HämtaAlumnerFrånLista(((Informationsutskick)GamlaListorComboBox.SelectedItem).UtskicksID);
+        //        MailingListaALumnerlistBox.DataSource = Alumner;
+        //        MailingListaALumnerlistBox.DisplayMember = "Förnamn";
+        //        MailingListaALumnerlistBox.ValueMember = "AnvändarID";
+        //    }
 
-        }
+        //}
 
         private void LaddaGamlaAlumnerFrånListabtn_Click(object sender, EventArgs e)
         {
@@ -437,9 +437,9 @@ namespace PresentationLayer
                 if (!MailingListaALumnerlistBox.Items.Contains(alumn))
                 {
                     List<Alumn> alumner = new List<Alumn>();
-                    foreach (Alumn alumn1 in MailingListaALumnerlistBox.Items)
+                    foreach (Alumn alumn2 in MailingListaALumnerlistBox.Items)
                     {
-                        alumner.Add(alumn1);
+                        alumner.Add(alumn2);
                     }
                     alumner.Add(alumn);
                     MailingListaALumnerlistBox.DataSource = alumner;
