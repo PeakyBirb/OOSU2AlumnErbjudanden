@@ -21,7 +21,7 @@ namespace DataLayer.Seed
                 //Alumn
                 Alumn alumn1 = new Alumn()
                 {
-                    Användarnamn = "abc",
+                    Användarnamn = "vissla@mail.com",
                     Lösenord = "123",
                     Förnamn = "Vissla",
                     Efternamn = "Kvist",

@@ -539,7 +539,7 @@ namespace PresentationLayer
                 bm.Commit();
 
                 List<Alumn> alumner = new List<Alumn>();
-                foreach (Alumn alumn in valdaAlumnerListBox.Items)
+                foreach (Alumn alumn in MailingListaALumnerlistBox.Items)
                 {
                     alumner.Add(alumn);
                 }
